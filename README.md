@@ -11,7 +11,7 @@
 <hr>
 
 <p align="center">
-  <img src="https://somovstudio.github.io/img/projects/editor.png">
+  <img src="https://somovstudio.github.io/img/projects/json_file_editor/json_file_editor_1.png">
 </p>
 
 Системные требования: Windows 7, 8, 10
