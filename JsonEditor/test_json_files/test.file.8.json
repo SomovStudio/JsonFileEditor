@@ -1,0 +1,9 @@
+{
+	"Object": {
+		"Message": "Hello 
+		World!!!",
+		"text1": "Строка содержит \"key\" : \"value\"",
+		"text2": "Строка содержит key : value",
+		"text3": "Строка содержит key и value"
+	}
+}
