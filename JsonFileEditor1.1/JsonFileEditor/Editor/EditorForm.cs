@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace JsonFileEditor
+namespace JsonFileEditor.Editor
 {
-    public partial class Form1 : Form
+    public partial class EditorForm : Form
     {
-        public Form1()
+        public EditorForm()
         {
             InitializeComponent();
         }
