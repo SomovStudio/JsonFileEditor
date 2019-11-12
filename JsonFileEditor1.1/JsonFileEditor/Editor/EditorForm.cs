@@ -52,7 +52,7 @@ namespace JsonFileEditor.Editor
                 DataForms.CountEditorForms++;
                 _pathFileName = _safeFileName;
                 toolStripStatusLabel4.Text = _pathFileName;
-                //treeView1.Nodes.Add(_safeFileName);
+                treeView1.Nodes.Add(_safeFileName);
                 //createTable();
             }
             catch (Exception ex)

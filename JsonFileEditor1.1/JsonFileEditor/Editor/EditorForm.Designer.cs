@@ -70,18 +70,70 @@
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.consoleRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.добавитьОбъектToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьМассивToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.добавитьЗаписьКлючЗначениеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьЗаписьТолькоЗначениеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.удалитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.добавитьОбъектToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьМассивToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьЗаписьКлючЗначениеToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьЗаписьТолькоЗначениеToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.editorRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -278,8 +330,8 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(129, 17);
-            this.toolStripStatusLabel1.Text = "2019 © Somov Evgeniy";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(122, 17);
+            this.toolStripStatusLabel1.Text = "2019 © Somov Studio";
             // 
             // toolStripStatusLabel2
             // 
@@ -393,6 +445,10 @@
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
+            // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
@@ -400,6 +456,16 @@
             this.splitContainer1.Size = new System.Drawing.Size(1008, 658);
             this.splitContainer1.SplitterDistance = 483;
             this.splitContainer1.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1008, 20);
+            this.panel1.TabIndex = 2;
             // 
             // label1
             // 
@@ -425,16 +491,6 @@
             this.label2.Size = new System.Drawing.Size(1002, 2);
             this.label2.TabIndex = 1;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 20);
-            this.panel1.TabIndex = 2;
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -459,6 +515,372 @@
             this.consoleRichTextBox.TabIndex = 0;
             this.consoleRichTextBox.Text = "";
             // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.panel3);
+            this.splitContainer2.Panel1.Controls.Add(this.panel4);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
+            this.splitContainer2.Size = new System.Drawing.Size(1008, 483);
+            this.splitContainer2.SplitterDistance = 336;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(4, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(329, 22);
+            this.panel3.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.SteelBlue;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Навигация:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.BackColor = System.Drawing.Color.SteelBlue;
+            this.label4.Location = new System.Drawing.Point(0, 19);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(330, 2);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "label4";
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.treeView1);
+            this.panel4.Controls.Add(this.toolStrip2);
+            this.panel4.Location = new System.Drawing.Point(4, 24);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(329, 456);
+            this.panel4.TabIndex = 1;
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton7,
+            this.toolStripButton8,
+            this.toolStripSeparator5,
+            this.toolStripDropDownButton1});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(327, 25);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton7.Text = "Свернуть все узлы";
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton8.Text = "Развернуть все узлы";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.добавитьОбъектToolStripMenuItem1,
+            this.добавитьМассивToolStripMenuItem1,
+            this.toolStripSeparator6,
+            this.добавитьЗаписьКлючЗначениеToolStripMenuItem1,
+            this.добавитьЗаписьТолькоЗначениеToolStripMenuItem1,
+            this.toolStripSeparator7,
+            this.удалитьToolStripMenuItem1});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButton1.Text = "Инструменты";
+            // 
+            // добавитьОбъектToolStripMenuItem1
+            // 
+            this.добавитьОбъектToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("добавитьОбъектToolStripMenuItem1.Image")));
+            this.добавитьОбъектToolStripMenuItem1.Name = "добавитьОбъектToolStripMenuItem1";
+            this.добавитьОбъектToolStripMenuItem1.Size = new System.Drawing.Size(279, 22);
+            this.добавитьОбъектToolStripMenuItem1.Text = "Добавить объект { }";
+            // 
+            // добавитьМассивToolStripMenuItem1
+            // 
+            this.добавитьМассивToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("добавитьМассивToolStripMenuItem1.Image")));
+            this.добавитьМассивToolStripMenuItem1.Name = "добавитьМассивToolStripMenuItem1";
+            this.добавитьМассивToolStripMenuItem1.Size = new System.Drawing.Size(279, 22);
+            this.добавитьМассивToolStripMenuItem1.Text = "Добавить массив [ ]";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(276, 6);
+            // 
+            // добавитьЗаписьКлючЗначениеToolStripMenuItem1
+            // 
+            this.добавитьЗаписьКлючЗначениеToolStripMenuItem1.Name = "добавитьЗаписьКлючЗначениеToolStripMenuItem1";
+            this.добавитьЗаписьКлючЗначениеToolStripMenuItem1.Size = new System.Drawing.Size(279, 22);
+            this.добавитьЗаписьКлючЗначениеToolStripMenuItem1.Text = "Добавить запись \"Ключ\": \"Значение\"";
+            // 
+            // добавитьЗаписьТолькоЗначениеToolStripMenuItem1
+            // 
+            this.добавитьЗаписьТолькоЗначениеToolStripMenuItem1.Name = "добавитьЗаписьТолькоЗначениеToolStripMenuItem1";
+            this.добавитьЗаписьТолькоЗначениеToolStripMenuItem1.Size = new System.Drawing.Size(279, 22);
+            this.добавитьЗаписьТолькоЗначениеToolStripMenuItem1.Text = "Добавить запись только \"Значение\"";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(276, 6);
+            // 
+            // удалитьToolStripMenuItem1
+            // 
+            this.удалитьToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("удалитьToolStripMenuItem1.Image")));
+            this.удалитьToolStripMenuItem1.Name = "удалитьToolStripMenuItem1";
+            this.удалитьToolStripMenuItem1.Size = new System.Drawing.Size(279, 22);
+            this.удалитьToolStripMenuItem1.Text = "Удалить";
+            // 
+            // treeView1
+            // 
+            this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeView1.ContextMenuStrip = this.contextMenuStrip1;
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Location = new System.Drawing.Point(0, 25);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(327, 429);
+            this.treeView1.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.добавитьОбъектToolStripMenuItem2,
+            this.добавитьМассивToolStripMenuItem2,
+            this.добавитьЗаписьКлючЗначениеToolStripMenuItem2,
+            this.добавитьЗаписьТолькоЗначениеToolStripMenuItem2,
+            this.удалитьToolStripMenuItem2});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(280, 114);
+            // 
+            // добавитьОбъектToolStripMenuItem2
+            // 
+            this.добавитьОбъектToolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("добавитьОбъектToolStripMenuItem2.Image")));
+            this.добавитьОбъектToolStripMenuItem2.Name = "добавитьОбъектToolStripMenuItem2";
+            this.добавитьОбъектToolStripMenuItem2.Size = new System.Drawing.Size(279, 22);
+            this.добавитьОбъектToolStripMenuItem2.Text = "Добавить объект { }";
+            // 
+            // добавитьМассивToolStripMenuItem2
+            // 
+            this.добавитьМассивToolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("добавитьМассивToolStripMenuItem2.Image")));
+            this.добавитьМассивToolStripMenuItem2.Name = "добавитьМассивToolStripMenuItem2";
+            this.добавитьМассивToolStripMenuItem2.Size = new System.Drawing.Size(279, 22);
+            this.добавитьМассивToolStripMenuItem2.Text = "Добавить массив [ ]";
+            // 
+            // добавитьЗаписьКлючЗначениеToolStripMenuItem2
+            // 
+            this.добавитьЗаписьКлючЗначениеToolStripMenuItem2.Name = "добавитьЗаписьКлючЗначениеToolStripMenuItem2";
+            this.добавитьЗаписьКлючЗначениеToolStripMenuItem2.Size = new System.Drawing.Size(279, 22);
+            this.добавитьЗаписьКлючЗначениеToolStripMenuItem2.Text = "Добавить запись \"Ключ\": \"Значение\"";
+            // 
+            // добавитьЗаписьТолькоЗначениеToolStripMenuItem2
+            // 
+            this.добавитьЗаписьТолькоЗначениеToolStripMenuItem2.Name = "добавитьЗаписьТолькоЗначениеToolStripMenuItem2";
+            this.добавитьЗаписьТолькоЗначениеToolStripMenuItem2.Size = new System.Drawing.Size(279, 22);
+            this.добавитьЗаписьТолькоЗначениеToolStripMenuItem2.Text = "Добавить запись только \"Значение\"";
+            // 
+            // удалитьToolStripMenuItem2
+            // 
+            this.удалитьToolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("удалитьToolStripMenuItem2.Image")));
+            this.удалитьToolStripMenuItem2.Name = "удалитьToolStripMenuItem2";
+            this.удалитьToolStripMenuItem2.Size = new System.Drawing.Size(279, 22);
+            this.удалитьToolStripMenuItem2.Text = "Удалить";
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.panel5);
+            this.splitContainer3.Panel1.Controls.Add(this.panel6);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.panel7);
+            this.splitContainer3.Panel2.Controls.Add(this.panel8);
+            this.splitContainer3.Size = new System.Drawing.Size(668, 483);
+            this.splitContainer3.SplitterDistance = 273;
+            this.splitContainer3.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Location = new System.Drawing.Point(0, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(664, 22);
+            this.panel5.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.BackColor = System.Drawing.Color.SteelBlue;
+            this.label5.Location = new System.Drawing.Point(0, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(665, 2);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.SteelBlue;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(150, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Представление:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.editorRichTextBox);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Location = new System.Drawing.Point(0, 24);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(664, 246);
+            this.panel6.TabIndex = 2;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(664, 22);
+            this.panel7.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.BackColor = System.Drawing.Color.SteelBlue;
+            this.label7.Location = new System.Drawing.Point(0, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(665, 2);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.SteelBlue;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(150, 20);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Редактор:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.dataGridView1);
+            this.panel8.Location = new System.Drawing.Point(0, 20);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(664, 183);
+            this.panel8.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label9.ForeColor = System.Drawing.Color.SlateBlue;
+            this.label9.Location = new System.Drawing.Point(0, 224);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(662, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Строка: 0";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // editorRichTextBox
+            // 
+            this.editorRichTextBox.BackColor = System.Drawing.Color.White;
+            this.editorRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.editorRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editorRichTextBox.Location = new System.Drawing.Point(0, 0);
+            this.editorRichTextBox.Name = "editorRichTextBox";
+            this.editorRichTextBox.Size = new System.Drawing.Size(662, 224);
+            this.editorRichTextBox.TabIndex = 1;
+            this.editorRichTextBox.Text = "";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(662, 181);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // EditorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,10 +902,28 @@
             this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            this.splitContainer3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,5 +976,41 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox consoleRichTextBox;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem добавитьОбъектToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem добавитьМассивToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem добавитьЗаписьКлючЗначениеToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem добавитьЗаписьТолькоЗначениеToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem1;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem добавитьОбъектToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem добавитьМассивToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem добавитьЗаписьКлючЗначениеToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem добавитьЗаписьТолькоЗначениеToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem2;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RichTextBox editorRichTextBox;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
