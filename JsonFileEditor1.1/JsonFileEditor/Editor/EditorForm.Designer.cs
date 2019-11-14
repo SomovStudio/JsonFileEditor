@@ -100,6 +100,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.editorRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.копироватьВесьТекстToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label9 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -111,13 +113,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.consoleRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.очиститьКонсольToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openJsonFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveJsonFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.очиститьКонсольToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.копироватьВесьТекстToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -136,13 +136,13 @@
             this.splitContainer3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.contextMenuStrip3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
-            this.contextMenuStrip3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -332,7 +332,7 @@
             // 
             this.оПрограммеToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("оПрограммеToolStripMenuItem.Image")));
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе...";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -800,6 +800,20 @@
             this.editorRichTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.editorRichTextBox_MouseClick);
             this.editorRichTextBox.TextChanged += new System.EventHandler(this.editorRichTextBox_TextChanged);
             // 
+            // contextMenuStrip3
+            // 
+            this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.копироватьВесьТекстToolStripMenuItem});
+            this.contextMenuStrip3.Name = "contextMenuStrip3";
+            this.contextMenuStrip3.Size = new System.Drawing.Size(198, 26);
+            // 
+            // копироватьВесьТекстToolStripMenuItem
+            // 
+            this.копироватьВесьТекстToolStripMenuItem.Name = "копироватьВесьТекстToolStripMenuItem";
+            this.копироватьВесьТекстToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.копироватьВесьТекстToolStripMenuItem.Text = "Копировать весь текст";
+            this.копироватьВесьТекстToolStripMenuItem.Click += new System.EventHandler(this.копироватьВесьТекстToolStripMenuItem_Click);
+            // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.White;
@@ -934,14 +948,6 @@
             this.consoleRichTextBox.TabIndex = 0;
             this.consoleRichTextBox.Text = "";
             // 
-            // openJsonFileDialog
-            // 
-            this.openJsonFileDialog.Filter = "*.json|*.json";
-            // 
-            // saveJsonFileDialog
-            // 
-            this.saveJsonFileDialog.Filter = "*.json|*.json";
-            // 
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -949,26 +955,20 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(176, 26);
             // 
-            // contextMenuStrip3
-            // 
-            this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.копироватьВесьТекстToolStripMenuItem});
-            this.contextMenuStrip3.Name = "contextMenuStrip3";
-            this.contextMenuStrip3.Size = new System.Drawing.Size(198, 26);
-            // 
             // очиститьКонсольToolStripMenuItem
             // 
             this.очиститьКонсольToolStripMenuItem.Name = "очиститьКонсольToolStripMenuItem";
-            this.очиститьКонсольToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.очиститьКонсольToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.очиститьКонсольToolStripMenuItem.Text = "Очистить консоль";
             this.очиститьКонсольToolStripMenuItem.Click += new System.EventHandler(this.очиститьКонсольToolStripMenuItem_Click);
             // 
-            // копироватьВесьТекстToolStripMenuItem
+            // openJsonFileDialog
             // 
-            this.копироватьВесьТекстToolStripMenuItem.Name = "копироватьВесьТекстToolStripMenuItem";
-            this.копироватьВесьТекстToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.копироватьВесьТекстToolStripMenuItem.Text = "Копировать весь текст";
-            this.копироватьВесьТекстToolStripMenuItem.Click += new System.EventHandler(this.копироватьВесьТекстToolStripMenuItem_Click);
+            this.openJsonFileDialog.Filter = "*.json|*.json";
+            // 
+            // saveJsonFileDialog
+            // 
+            this.saveJsonFileDialog.Filter = "*.json|*.json";
             // 
             // EditorForm
             // 
@@ -1008,13 +1008,13 @@
             this.splitContainer3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.contextMenuStrip3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.contextMenuStrip2.ResumeLayout(false);
-            this.contextMenuStrip3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

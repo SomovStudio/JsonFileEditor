@@ -54,6 +54,7 @@ namespace JsonFileEditor.Editor
             {
                 EditorForm editor = new EditorForm();
                 editor.Show();
+                consoleMessage("Создано новое окно");
             }
             catch (Exception ex)
             {
@@ -84,6 +85,7 @@ namespace JsonFileEditor.Editor
                     {
                         updateEditorRichTextBox();
                     }
+                    consoleMessage("Открыт файл "+_safeFileName);
                 }
                 catch (Exception ex)
                 {
@@ -119,8 +121,9 @@ namespace JsonFileEditor.Editor
 
                         }
                         sw.Close();
-                        this.Text = "Json File Editor v 1.0";
+                        this.Text = "Json File Editor v 1.1";
                     }
+                    consoleMessage("Файл сохранён");
                 }
                 else
                 {
@@ -166,9 +169,10 @@ namespace JsonFileEditor.Editor
 
                         }
                         sw.Close();
-                        this.Text = "Json File Editor v 1.0";
+                        this.Text = "Json File Editor v 1.1";
                     }
                 }
+                consoleMessage("Файл сохранен как...");
             }
             catch (Exception ex)
             {
@@ -405,7 +409,8 @@ namespace JsonFileEditor.Editor
                 setNodeInDataGridView();
 
                 updateEditorRichTextBox(Convert.ToInt32(_selectedNode.Tag));
-                this.Text = "Json File Editor v 1.0 [ изменения не сохранены ]";
+                this.Text = "Json File Editor v 1.1 [ изменения не сохранены ]";
+                consoleMessage("Добавлен объект");
             }
             catch (Exception ex)
             {
@@ -445,7 +450,8 @@ namespace JsonFileEditor.Editor
                 setNodeInDataGridView();
 
                 updateEditorRichTextBox(Convert.ToInt32(_selectedNode.Tag));
-                this.Text = "Json File Editor v 1.0 [ изменения не сохранены ]";
+                this.Text = "Json File Editor v 1.1 [ изменения не сохранены ]";
+                consoleMessage("Добавлен массив");
             }
             catch (Exception ex)
             {
@@ -485,7 +491,9 @@ namespace JsonFileEditor.Editor
                 setNodeInDataGridView();
 
                 updateEditorRichTextBox(Convert.ToInt32(_selectedNode.Tag));
-                this.Text = "Json File Editor v 1.0 [ изменения не сохранены ]";
+                this.Text = "Json File Editor v 1.1 [ изменения не сохранены ]";
+
+                consoleMessage("Добавлено ключ:значение");
             }
             catch (Exception ex)
             {
@@ -525,7 +533,9 @@ namespace JsonFileEditor.Editor
                 setNodeInDataGridView();
 
                 updateEditorRichTextBox(Convert.ToInt32(_selectedNode.Tag));
-                this.Text = "Json File Editor v 1.0 [ изменения не сохранены ]";
+                this.Text = "Json File Editor v 1.1 [ изменения не сохранены ]";
+
+                consoleMessage("Добавлено значение");
             }
             catch (Exception ex)
             {
@@ -577,7 +587,9 @@ namespace JsonFileEditor.Editor
                 setNodeInDataGridView();
 
                 updateEditorRichTextBox(Convert.ToInt32(_selectedNode.Tag));
-                this.Text = "Json File Editor v 1.0 [ изменения не сохранены ]";
+                this.Text = "Json File Editor v 1.1 [ изменения не сохранены ]";
+
+                consoleMessage("Удаление выполнено");
             }
             catch (Exception ex)
             {
@@ -1093,7 +1105,7 @@ namespace JsonFileEditor.Editor
                     setNodeInDataGridView();
 
                     updateEditorRichTextBox(Convert.ToInt32(_selectedNode.Tag));
-                    this.Text = "Json File Editor v 1.0 [ изменения не сохранены ]";
+                    this.Text = "Json File Editor v 1.1 [ изменения не сохранены ]";
                     return;
                 }
 
@@ -1178,7 +1190,7 @@ namespace JsonFileEditor.Editor
 
                 setNodeInDataGridView();
                 updateEditorRichTextBox(Convert.ToInt32(_selectedNode.Tag));
-                this.Text = "Json File Editor v 1.0 [ изменения не сохранены ]";
+                this.Text = "Json File Editor v 1.1 [ изменения не сохранены ]";
             }
             catch (Exception ex)
             {
@@ -1200,7 +1212,7 @@ namespace JsonFileEditor.Editor
                 {
                     _ds.Tables[0].Clear();
                 }
-                this.Text = "Json File Editor v 1.0 [ изменения не сохранены ]";
+                this.Text = "Json File Editor v 1.1 [ изменения не сохранены ]";
             }
             catch (Exception ex)
             {
@@ -1297,5 +1309,6 @@ namespace JsonFileEditor.Editor
         {
             deleteNodeInTree();
         }
+
     }
 }
