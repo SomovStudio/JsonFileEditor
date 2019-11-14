@@ -155,6 +155,7 @@ namespace JsonFileEditor.Editor
                     {
                         JsonData.indexTextLine = 0;
                         editorRichTextBox.Text = JsonData.GetTextFromTreeView(treeView1.Nodes[0].Nodes[0], 0);
+                        treeView1.Nodes[0].Text = _safeFileName;
                     }
 
                     using (StreamWriter sw = new StreamWriter(_pathFileName))
