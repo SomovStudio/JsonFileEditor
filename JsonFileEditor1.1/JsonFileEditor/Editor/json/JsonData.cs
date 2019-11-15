@@ -45,6 +45,7 @@ namespace JsonFileEditor.Editor.json
             string token = null;
             int tokenStatus = TOKEN_END;
             int lastTokenStatus = TOKEN_END;
+            bool thisIsArray = false;
 
             int count = jsonText.Length;
             for (int i = 0; i < count; i++)
@@ -83,6 +84,7 @@ namespace JsonFileEditor.Editor.json
                 }
                 else if (c == '[')
                 {
+                    thisIsArray = true;
                     if (key == null) node = new TreeNode("[ ]");
                     else node = new TreeNode(key + ": [ ]");
                     node.Text = node.Text.Trim();
@@ -95,6 +97,7 @@ namespace JsonFileEditor.Editor.json
                 }
                 else if (c == ']')
                 {
+                    thisIsArray = false;
                     if (token != null)
                     {
                         value = token;
@@ -126,12 +129,12 @@ namespace JsonFileEditor.Editor.json
                         c.GetHashCode() != charNewLine2) token += c;
 
                 // ФЛАГИ
-                if (c == '"' && tokenStatus == TOKEN_END) // Начало токена строка
+                if (c == '"' && tokenStatus == TOKEN_END && thisIsArray == false) // Начало токена строка
                 {
                     tokenStatus = TOKEN_STRING_START;
                     token = c.ToString();
                 }
-                else if (c == '"' && tokenStatus == TOKEN_STRING_START) // Завершение токена строка
+                else if (c == '"' && tokenStatus == TOKEN_STRING_START && thisIsArray == false) // Завершение токена строка
                 {
                     tokenStatus = TOKEN_END;
                 }
