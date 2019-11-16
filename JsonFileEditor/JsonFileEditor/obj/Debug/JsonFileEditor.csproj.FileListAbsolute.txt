@@ -8,3 +8,13 @@ C:\GIT\JsonFileEditor\JsonFileEditor1.1\JsonFileEditor\obj\Debug\JsonFileEditor.
 C:\GIT\JsonFileEditor\JsonFileEditor1.1\JsonFileEditor\obj\Debug\JsonFileEditor.csproj.GenerateResource.cache
 C:\GIT\JsonFileEditor\JsonFileEditor1.1\JsonFileEditor\obj\Debug\JsonFileEditor.exe
 C:\GIT\JsonFileEditor\JsonFileEditor1.1\JsonFileEditor\obj\Debug\JsonFileEditor.pdb
+C:\GIT\JsonFileEditor\JsonFileEditor\JsonFileEditor\bin\Debug\JsonFileEditor.exe
+C:\GIT\JsonFileEditor\JsonFileEditor\JsonFileEditor\bin\Debug\JsonFileEditor.pdb
+C:\GIT\JsonFileEditor\JsonFileEditor\JsonFileEditor\obj\Debug\JsonFileEditor.csprojAssemblyReference.cache
+C:\GIT\JsonFileEditor\JsonFileEditor\JsonFileEditor\obj\Debug\JsonFileEditor.Editor.AboutForm.resources
+C:\GIT\JsonFileEditor\JsonFileEditor\JsonFileEditor\obj\Debug\JsonFileEditor.Editor.EditorForm.resources
+C:\GIT\JsonFileEditor\JsonFileEditor\JsonFileEditor\obj\Debug\JsonFileEditor.MainForm.resources
+C:\GIT\JsonFileEditor\JsonFileEditor\JsonFileEditor\obj\Debug\JsonFileEditor.Properties.Resources.resources
+C:\GIT\JsonFileEditor\JsonFileEditor\JsonFileEditor\obj\Debug\JsonFileEditor.csproj.GenerateResource.cache
+C:\GIT\JsonFileEditor\JsonFileEditor\JsonFileEditor\obj\Debug\JsonFileEditor.exe
+C:\GIT\JsonFileEditor\JsonFileEditor\JsonFileEditor\obj\Debug\JsonFileEditor.pdb

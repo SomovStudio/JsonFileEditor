@@ -52,6 +52,7 @@
             this.сервисToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onlineJSONValidatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.описаниеФорматаJSONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -118,7 +119,6 @@
             this.openJsonFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveJsonFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.описаниеФорматаJSONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -329,6 +329,13 @@
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
+            // 
+            // описаниеФорматаJSONToolStripMenuItem
+            // 
+            this.описаниеФорматаJSONToolStripMenuItem.Name = "описаниеФорматаJSONToolStripMenuItem";
+            this.описаниеФорматаJSONToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.описаниеФорматаJSONToolStripMenuItem.Text = "Описание формата JSON";
+            this.описаниеФорматаJSONToolStripMenuItem.Click += new System.EventHandler(this.описаниеФорматаJSONToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -972,13 +979,6 @@
             // 
             this.saveJsonFileDialog.Filter = "*.json|*.json";
             // 
-            // описаниеФорматаJSONToolStripMenuItem
-            // 
-            this.описаниеФорматаJSONToolStripMenuItem.Name = "описаниеФорматаJSONToolStripMenuItem";
-            this.описаниеФорматаJSONToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.описаниеФорматаJSONToolStripMenuItem.Text = "Описание формата JSON";
-            this.описаниеФорматаJSONToolStripMenuItem.Click += new System.EventHandler(this.описаниеФорматаJSONToolStripMenuItem_Click);
-            // 
             // EditorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -991,7 +991,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "EditorForm";
-            this.Text = "Json File Editor v 1.1";
+            this.Text = "Json File Editor";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditorForm_FormClosed);
             this.Load += new System.EventHandler(this.EditorForm_Load);
             this.menuStrip1.ResumeLayout(false);
