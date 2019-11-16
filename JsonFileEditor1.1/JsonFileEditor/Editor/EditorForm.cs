@@ -1310,5 +1310,16 @@ namespace JsonFileEditor.Editor
             deleteNodeInTree();
         }
 
+        private void описаниеФорматаJSONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(@"https://json.org/");
+            }
+            catch (Exception ex)
+            {
+                consoleMessage("Ошибка: " + ex.Message);
+            }
+        }
     }
 }
