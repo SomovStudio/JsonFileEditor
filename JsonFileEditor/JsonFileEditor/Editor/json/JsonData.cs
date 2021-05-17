@@ -15,6 +15,7 @@ namespace JsonFileEditor.Editor.json
         public const int TYPE_OTHER = 0;
         public const int TYPE_OBJECT = 1;
         public const int TYPE_ARRAY = 2;
+        public const int TYPE_STRING = 3;
 
         public static TreeNode SetDataInTreeView(string jsonText, string filename)
         {
@@ -44,6 +45,7 @@ namespace JsonFileEditor.Editor.json
             string value = null;
             string token = null;
             int tokenStatus = TOKEN_END;
+            int tokenType = TYPE_OTHER;
             int lastTokenStatus = TOKEN_END;
             bool thisIsArray = false;
 
@@ -52,8 +54,10 @@ namespace JsonFileEditor.Editor.json
             {
                 c = jsonText[i];
 
+                //MessageBox.Show("СИМВОЛ: " + c + " | " + token + " [" + tokenType + "]");
+
                 // УЗЛЫ
-                if (c == '{')
+                if (c == '{' && tokenType != TYPE_STRING)
                 {
                     if (key == null) node = new TreeNode("{ }");
                     else node = new TreeNode(key + ": { }");
@@ -65,7 +69,7 @@ namespace JsonFileEditor.Editor.json
                     tokenStatus = TOKEN_END;
                     level++;
                 }
-                else if (c == '}')
+                else if (c == '}' && tokenType != TYPE_STRING)
                 {
                     if (token != null)
                     {
@@ -82,7 +86,7 @@ namespace JsonFileEditor.Editor.json
                     level--;
                     continue;
                 }
-                else if (c == '[')
+                else if (c == '[' && tokenType != TYPE_STRING)
                 {
                     thisIsArray = true;
                     if (key == null) node = new TreeNode("[ ]");
@@ -95,7 +99,7 @@ namespace JsonFileEditor.Editor.json
                     tokenStatus = TOKEN_END;
                     level++;
                 }
-                else if (c == ']')
+                else if (c == ']' && tokenType != TYPE_STRING)
                 {
                     thisIsArray = false;
                     if (token != null)
@@ -115,11 +119,10 @@ namespace JsonFileEditor.Editor.json
                     continue;
                 }
 
-
                 // ТОКЕН
                 // Формируется значение тип которого строка
                 if (tokenStatus == TOKEN_STRING_START &&
-                           c.GetHashCode() != charNewLine1 &&
+                        c.GetHashCode() != charNewLine1 &&
                         c.GetHashCode() != charNewLine2) token += c;
                 // Формируем значение тип которого любое значение
                 else if (tokenStatus == TOKEN_VALUE_START &&
@@ -132,11 +135,21 @@ namespace JsonFileEditor.Editor.json
                 if (c == '"' && tokenStatus == TOKEN_END && thisIsArray == false) // Начало токена строка
                 {
                     tokenStatus = TOKEN_STRING_START;
+                    tokenType = TYPE_STRING;
                     token = c.ToString();
+                }
+                else if(c == '"' && tokenStatus == TOKEN_VALUE_START && thisIsArray == false)
+                {
+                    tokenType = TYPE_STRING;
                 }
                 else if (c == '"' && tokenStatus == TOKEN_STRING_START && thisIsArray == false) // Завершение токена строка
                 {
-                    tokenStatus = TOKEN_END;
+                    string cLast = token.Substring(token.Length - 2);
+                    if (cLast != "\\\"")
+                    {
+                        tokenType = TYPE_OTHER;
+                        tokenStatus = TOKEN_END;
+                    }
                 }
                 else if (c == ':' && tokenStatus == TOKEN_END)
                 {
@@ -146,6 +159,7 @@ namespace JsonFileEditor.Editor.json
                 else if (c == ',' && tokenStatus != TOKEN_STRING_START && tokenStatus == TOKEN_VALUE_START)
                 {
                     tokenStatus = TOKEN_END;
+                    tokenType = TYPE_OTHER;
                 }
                 else if (tokenStatus == TOKEN_END &&
                         c.GetHashCode() != charSpace &&
@@ -160,6 +174,8 @@ namespace JsonFileEditor.Editor.json
                     lastTokenStatus = TOKEN_VALUE_START;    // lastTokenStatus - для массива
                     token = c.ToString();
                 }
+
+                //MessageBox.Show("СИМВОЛ: " + c + " | " + token + " [" + tokenType + "]");
 
                 // СОХРАНЕНИЕ ТОКЕНА В ДЕРЕВЕ
                 if (token != null && tokenStatus == TOKEN_END)
