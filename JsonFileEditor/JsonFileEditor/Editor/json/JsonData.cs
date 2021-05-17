@@ -54,8 +54,6 @@ namespace JsonFileEditor.Editor.json
             {
                 c = jsonText[i];
 
-                //MessageBox.Show("СИМВОЛ: " + c + " | " + token + " [" + tokenType + "]");
-
                 // УЗЛЫ
                 if (c == '{' && tokenType != TYPE_STRING)
                 {
@@ -151,6 +149,10 @@ namespace JsonFileEditor.Editor.json
                         tokenStatus = TOKEN_END;
                     }
                 }
+                else if (c == '"' && thisIsArray == true)
+                {
+                    tokenType = TYPE_STRING;
+                }
                 else if (c == ':' && tokenStatus == TOKEN_END)
                 {
                     tokenStatus = TOKEN_VALUE_START;
@@ -174,8 +176,6 @@ namespace JsonFileEditor.Editor.json
                     lastTokenStatus = TOKEN_VALUE_START;    // lastTokenStatus - для массива
                     token = c.ToString();
                 }
-
-                //MessageBox.Show("СИМВОЛ: " + c + " | " + token + " [" + tokenType + "]");
 
                 // СОХРАНЕНИЕ ТОКЕНА В ДЕРЕВЕ
                 if (token != null && tokenStatus == TOKEN_END)
