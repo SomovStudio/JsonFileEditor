@@ -1,0 +1,40 @@
+{
+"port":9091,
+"arguments":[
+"--ignore-certificate-errors"
+],
+"timeout":60,
+"data":[
+{
+"title":"ШАГ: Открыл главную страницу сайта",
+"url":"https://mgts.ru/",
+"ga_category":"",
+"ga_action":"",
+"ga_label":"",
+"ym_code":""
+}
+],
+"steps":[
+{
+"description":"",
+"type":"execute_js",
+"value":"$(\"head\").prepend('<style type=\"text/css\">body{overflow:auto!important;}#popup-abonent{display:none!important}</style>');",
+"locator":"",
+"timeout":0
+},
+{
+"description":"",
+"type":"execute_js",
+"value":"$(\"head\").prepend('<style type=\"text/css\">body{overflow:auto!important;}.flocktory-widget-overlay{display:none!important}</style>');",
+"locator":"",
+"timeout":0
+},
+{
+"description":"Событие при открытии канала GA:Category (el=404)",
+"type":"test_optionally_ga",
+"value":"el=404",
+"locator":"google-analytics.com/collect",
+"timeout":5
+}
+]
+}
