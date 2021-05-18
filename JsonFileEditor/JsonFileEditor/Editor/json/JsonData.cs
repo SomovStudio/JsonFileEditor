@@ -94,7 +94,7 @@ namespace JsonFileEditor.Editor.json
                 }
                 else if (c == '}' && tokenType == TYPE_STRING)
                 {
-                    ////////////////////////MessageBox.Show("["+ tokenStatus + "]["+ thisIsArray + "]:" + token);
+                    //MessageBox.Show("["+ tokenType + "]["+ tokenStatus + "]["+ thisIsArray + "]:" + key + "|" + token);
                 }
                 else if (c == '[' && tokenType != TYPE_STRING)
                 {
@@ -156,7 +156,8 @@ namespace JsonFileEditor.Editor.json
                 }
                 else if(c == '"' && tokenStatus == TOKEN_VALUE_START && thisIsArray == false)
                 {
-                    tokenType = TYPE_STRING;
+                    if(tokenType != TYPE_STRING) tokenType = TYPE_STRING;
+                    else tokenType = TYPE_OTHER;
                 }
                 else if (c == '"' && tokenStatus == TOKEN_STRING_START && thisIsArray == false) // Завершение токена строка
                 {
