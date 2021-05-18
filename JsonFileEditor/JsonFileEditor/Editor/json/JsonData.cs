@@ -54,6 +54,8 @@ namespace JsonFileEditor.Editor.json
             {
                 c = jsonText[i];
 
+                //MessageBox.Show(c + "|" + token + "[" + tokenType + "][" + thisIsArray + "]");
+
                 // УЗЛЫ
                 if (c == '{' && tokenType != TYPE_STRING)
                 {
@@ -151,7 +153,16 @@ namespace JsonFileEditor.Editor.json
                 }
                 else if (c == '"' && thisIsArray == true)
                 {
-                    tokenType = TYPE_STRING;
+                    if(token != null)
+                    {
+                        string cLast = token.Substring(token.Length - 2);
+                        if (cLast != "\\\"" && tokenType == TYPE_STRING) tokenType = TYPE_OTHER;
+                        else tokenType = TYPE_STRING;
+                    }
+                    else
+                    {
+                        tokenType = TYPE_STRING;
+                    }
                 }
                 else if (c == ':' && tokenStatus == TOKEN_END)
                 {
