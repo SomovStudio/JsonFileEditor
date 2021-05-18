@@ -1,7 +1,8 @@
 {
-"port":9091,
+"script":"$(\"head\").prepend('<style type=\"text/css\">body{overflow:auto!important;}#popup-abonent{display:none!important}</style>');",
 "arguments":[
 "--ignore-certificate-errors"
 ],
-"text":"hello"
+"text":"hello",
+"port":[0,1,2]
 }

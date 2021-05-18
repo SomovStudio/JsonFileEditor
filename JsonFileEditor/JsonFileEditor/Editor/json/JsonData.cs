@@ -78,7 +78,7 @@ namespace JsonFileEditor.Editor.json
                         if (key == null)
                         {
                             //MessageBox.Show("№1:"+value + "[" + tokenType + "][" + thisIsArray + "]");
-                            if (value[0] != '"') value = '"' + value;
+                            if (value[0] != '"' && Char.IsDigit(value[0]) == false) value = '"' + value;
                             node = new TreeNode(value);
                         }
                         else node = new TreeNode(key + ": " + value);
@@ -91,6 +91,10 @@ namespace JsonFileEditor.Editor.json
                     tokenStatus = TOKEN_END;
                     level--;
                     continue;
+                }
+                else if (c == '}' && tokenType == TYPE_STRING)
+                {
+                    ////////////////////////MessageBox.Show("["+ tokenStatus + "]["+ thisIsArray + "]:" + token);
                 }
                 else if (c == '[' && tokenType != TYPE_STRING)
                 {
@@ -116,7 +120,7 @@ namespace JsonFileEditor.Editor.json
                         else
                         {
                             //MessageBox.Show("№2:" + value + "[" + tokenType + "][" + thisIsArray + "]");
-                            if (value[0] != '"') value = '"' + value;
+                            if (value[0] != '"' && Char.IsDigit(value[0]) == false) value = '"' + value;
                             node = new TreeNode(value);
                         }
                         node.Text = node.Text.Trim();
@@ -213,7 +217,7 @@ namespace JsonFileEditor.Editor.json
                         value = token;
                         token = null;
 
-                        if (tokenType == TYPE_OTHER && thisIsArray == true && value[0] != '"') value = '"' + value;
+                        if (tokenType == TYPE_OTHER && thisIsArray == true && value[0] != '"' && Char.IsDigit(value[0]) == false) value = '"' + value;
                         //MessageBox.Show(value + "[" + tokenType + "][" + thisIsArray + "]");
 
 
