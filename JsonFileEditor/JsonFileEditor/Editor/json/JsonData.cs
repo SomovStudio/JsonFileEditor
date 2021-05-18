@@ -74,7 +74,13 @@ namespace JsonFileEditor.Editor.json
                     if (token != null)
                     {
                         value = token;
-                        if (key == null) node = new TreeNode(value);
+                        if (tokenType == TYPE_OTHER && thisIsArray == true && value[0] != '"') value = '"' + value;
+                        if (key == null)
+                        {
+                            //MessageBox.Show("№1:"+value + "[" + tokenType + "][" + thisIsArray + "]");
+                            if (value[0] != '"') value = '"' + value;
+                            node = new TreeNode(value);
+                        }
                         else node = new TreeNode(key + ": " + value);
                         node.Text = node.Text.Trim();
                         JsonData.GetNodeAtLevel(tree, level).Nodes.Add(node);   // СОХРАНЕНИЕ ТОКЕНА В ДЕРЕВЕ
@@ -105,8 +111,14 @@ namespace JsonFileEditor.Editor.json
                     if (token != null)
                     {
                         value = token;
+                        if (tokenType == TYPE_OTHER && thisIsArray == true && value[0] != '"') value = '"' + value;
                         if (key != null && lastTokenStatus != TOKEN_VALUE_START) node = new TreeNode(key + ": " + value);
-                        else node = new TreeNode(value);
+                        else
+                        {
+                            //MessageBox.Show("№2:" + value + "[" + tokenType + "][" + thisIsArray + "]");
+                            if (value[0] != '"') value = '"' + value;
+                            node = new TreeNode(value);
+                        }
                         node.Text = node.Text.Trim();
                         JsonData.GetNodeAtLevel(tree, level).Nodes.Add(node);   // СОХРАНЕНИЕ ТОКЕНА В ДЕРЕВЕ	
                     }
@@ -200,6 +212,10 @@ namespace JsonFileEditor.Editor.json
                     {
                         value = token;
                         token = null;
+
+                        if (tokenType == TYPE_OTHER && thisIsArray == true && value[0] != '"') value = '"' + value;
+                        //MessageBox.Show(value + "[" + tokenType + "][" + thisIsArray + "]");
+
 
                         if (key == null) node = new TreeNode(value);
                         else node = new TreeNode(key + ": " + value);
