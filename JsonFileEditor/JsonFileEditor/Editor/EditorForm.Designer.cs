@@ -363,7 +363,7 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(122, 17);
-            this.toolStripStatusLabel1.Text = "2019 © Somov Studio";
+            this.toolStripStatusLabel1.Text = "2021 © Somov Studio";
             // 
             // toolStripStatusLabel2
             // 

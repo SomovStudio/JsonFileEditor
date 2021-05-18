@@ -89,7 +89,7 @@ namespace JsonFileEditor.Editor
                 }
                 catch (Exception ex)
                 {
-                    consoleMessage("Ошибка: " + ex);
+                    consoleMessage("Ошибка: " + ex.Message);
                 }
             }
         }
