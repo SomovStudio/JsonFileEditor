@@ -147,6 +147,7 @@
             this.openJsonFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveJsonFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -273,6 +274,7 @@
             this.сохранитьФайлToolStripMenuItem1.Name = "сохранитьФайлToolStripMenuItem1";
             this.сохранитьФайлToolStripMenuItem1.Size = new System.Drawing.Size(250, 22);
             this.сохранитьФайлToolStripMenuItem1.Text = "Сохранить файл";
+            this.сохранитьФайлToolStripMenuItem1.Click += new System.EventHandler(this.сохранитьФайлToolStripMenuItem1_Click);
             // 
             // сохранитьФайлКакToolStripMenuItem1
             // 
@@ -326,6 +328,7 @@
             this.открытьФайлToolStripMenuItem.Name = "открытьФайлToolStripMenuItem";
             this.открытьФайлToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
             this.открытьФайлToolStripMenuItem.Text = "___________Открыть файл";
+            this.открытьФайлToolStripMenuItem.Visible = false;
             this.открытьФайлToolStripMenuItem.Click += new System.EventHandler(this.открытьФайлToolStripMenuItem_Click);
             // 
             // сохранитьФайлToolStripMenuItem
@@ -334,6 +337,7 @@
             this.сохранитьФайлToolStripMenuItem.Name = "сохранитьФайлToolStripMenuItem";
             this.сохранитьФайлToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
             this.сохранитьФайлToolStripMenuItem.Text = "___________Сохранить файл";
+            this.сохранитьФайлToolStripMenuItem.Visible = false;
             this.сохранитьФайлToolStripMenuItem.Click += new System.EventHandler(this.сохранитьФайлToolStripMenuItem_Click);
             // 
             // сохранитьФайлКакToolStripMenuItem
@@ -341,6 +345,7 @@
             this.сохранитьФайлКакToolStripMenuItem.Name = "сохранитьФайлКакToolStripMenuItem";
             this.сохранитьФайлКакToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
             this.сохранитьФайлКакToolStripMenuItem.Text = "___________Сохранить файл как...";
+            this.сохранитьФайлКакToolStripMenuItem.Visible = false;
             this.сохранитьФайлКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьФайлКакToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -554,6 +559,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton2.Text = "Открыть файл";
+            this.toolStripButton2.Visible = false;
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
@@ -564,6 +570,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "Сохранить файл";
+            this.toolStripButton3.Visible = false;
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripSeparator3
@@ -616,16 +623,17 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
+            this.toolStripDropDownButton2,
+            this.toolStripButton9,
+            this.toolStripDropDownButton3,
             this.toolStripSeparator3,
             this.toolStripComboBox1,
             this.toolStripButton4,
             this.toolStripSeparator4,
             this.toolStripButton5,
             this.toolStripButton6,
-            this.toolStripDropDownButton2,
-            this.toolStripDropDownButton3});
+            this.toolStripButton3,
+            this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1008, 25);
@@ -652,18 +660,21 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(219, 22);
             this.toolStripMenuItem2.Text = "Кодировка UTF-8";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             this.toolStripMenuItem7.Size = new System.Drawing.Size(219, 22);
             this.toolStripMenuItem7.Text = "Кодировка UTF-8-BOM";
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
             this.toolStripMenuItem8.Size = new System.Drawing.Size(219, 22);
             this.toolStripMenuItem8.Text = "Кодировка Windows 1251";
+            this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
             // toolStripSeparator10
             // 
@@ -675,6 +686,7 @@
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
             this.toolStripMenuItem9.Size = new System.Drawing.Size(219, 22);
             this.toolStripMenuItem9.Text = "Кодировка по умолчанию";
+            this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
             // toolStripDropDownButton3
             // 
@@ -696,18 +708,21 @@
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(219, 22);
             this.toolStripMenuItem6.Text = "Кодировка UTF-8";
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
             this.toolStripMenuItem11.Size = new System.Drawing.Size(219, 22);
             this.toolStripMenuItem11.Text = "Кодировка UTF-8-BOM";
+            this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
             // 
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
             this.toolStripMenuItem12.Size = new System.Drawing.Size(219, 22);
             this.toolStripMenuItem12.Text = "Кодировка Windows 1251";
+            this.toolStripMenuItem12.Click += new System.EventHandler(this.toolStripMenuItem12_Click);
             // 
             // toolStripSeparator11
             // 
@@ -719,6 +734,7 @@
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
             this.toolStripMenuItem13.Size = new System.Drawing.Size(219, 22);
             this.toolStripMenuItem13.Text = "Кодировка по умолчанию";
+            this.toolStripMenuItem13.Click += new System.EventHandler(this.toolStripMenuItem13_Click);
             // 
             // splitContainer1
             // 
@@ -1222,6 +1238,16 @@
             // 
             this.saveJsonFileDialog.Filter = "*.json|*.json";
             // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton9.Text = "Сохранить файл";
+            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
+            // 
             // EditorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1391,5 +1417,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem13;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
     }
 }

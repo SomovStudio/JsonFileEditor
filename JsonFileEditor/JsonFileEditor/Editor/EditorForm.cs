@@ -1440,6 +1440,61 @@ namespace JsonFileEditor.Editor
             }
         }
 
+        private void saveFileEncoding(string encoding)
+        {
+            try
+            {
+                if (File.Exists(_pathFileName))
+                {
+                    if (treeView1.Nodes.Count <= 0)
+                    {
+                        consoleMessage("Нет данных для сохранения файла");
+                        return;
+                    }
+
+                    if (treeView1.Nodes[0].Nodes.Count > 0)
+                    {
+                        JsonData.indexTextLine = 0;
+                        editorRichTextBox.Text = JsonData.GetTextFromTreeView(treeView1.Nodes[0].Nodes[0], 0);
+                    }
+
+                    StreamWriter writer;
+                    if (encoding == DEFAULT)
+                    {
+                        writer = new StreamWriter(saveJsonFileDialog.FileName, false, Encoding.Default);
+                    }
+                    else if (encoding == UTF_8)
+                    {
+                        writer = new StreamWriter(saveJsonFileDialog.FileName, false, new UTF8Encoding(false));
+                    }
+                    else if (encoding == UTF_8_BOM)
+                    {
+                        writer = new StreamWriter(saveJsonFileDialog.FileName, false, new UTF8Encoding(true));
+                    }
+                    else if (encoding == WINDOWS_1251)
+                    {
+                        writer = new StreamWriter(saveJsonFileDialog.FileName, false, Encoding.GetEncoding("Windows-1251"));
+                    }
+                    else
+                    {
+                        writer = new StreamWriter(saveJsonFileDialog.FileName, false, Encoding.Default);
+                    }
+                    writer.Write(editorRichTextBox.Text);
+                    writer.Close();
+                    this.Text = "Json File Editor";
+                    consoleMessage("Файл сохранен");
+                }
+                else
+                {
+                    saveAsFileEncoding(encoding);
+                }
+            }
+            catch (Exception ex)
+            {
+                consoleMessage("Ошибка: " + ex.Message);
+            }
+        }
+
         private void открытьФайлToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             openAsFileEncoding(DEFAULT);
@@ -1483,6 +1538,56 @@ namespace JsonFileEditor.Editor
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
             saveAsFileEncoding(DEFAULT);
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            openAsFileEncoding(UTF_8);
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            openAsFileEncoding(UTF_8_BOM);
+        }
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            openAsFileEncoding(WINDOWS_1251);
+        }
+
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            openAsFileEncoding(DEFAULT);
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            saveAsFileEncoding(UTF_8);
+        }
+
+        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+            saveAsFileEncoding(UTF_8_BOM);
+        }
+
+        private void toolStripMenuItem12_Click(object sender, EventArgs e)
+        {
+            saveAsFileEncoding(WINDOWS_1251);
+        }
+
+        private void toolStripMenuItem13_Click(object sender, EventArgs e)
+        {
+            saveAsFileEncoding(DEFAULT);
+        }
+
+        private void сохранитьФайлToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            saveFileEncoding(toolStripStatusLabel5.Text);
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            saveFileEncoding(toolStripStatusLabel5.Text);
         }
     }
 }
