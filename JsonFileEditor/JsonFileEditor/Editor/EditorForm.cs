@@ -19,6 +19,11 @@ namespace JsonFileEditor.Editor
             InitializeComponent();
         }
 
+        public const string DEFAULT = "Кодировка: default";
+        public const string UTF_8 = "Кодировка: utf-8";
+        public const string UTF_8_BOM = "Кодировка: utf-8 bom";
+        public const string WINDOWS_1251 = "Кодировка: windows-1251";
+
         string _safeFileName = "empty.json";
         string _pathFileName = "";
 
@@ -1320,6 +1325,164 @@ namespace JsonFileEditor.Editor
             {
                 consoleMessage("Ошибка: " + ex.Message);
             }
+        }
+
+        private void openAsFileEncoding(string encoding)
+        {
+            try
+            {
+                if (openJsonFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    StreamReader sr;
+                    if (encoding == DEFAULT)
+                    {
+                        sr = new StreamReader(openJsonFileDialog.FileName, Encoding.Default);
+                    }
+                    else if (encoding == UTF_8)
+                    {
+                        sr = new StreamReader(openJsonFileDialog.FileName, new UTF8Encoding(false));
+                    }
+                    else if (encoding == UTF_8_BOM)
+                    {
+                        sr = new StreamReader(openJsonFileDialog.FileName, new UTF8Encoding(true));
+                    }
+                    else if (encoding == WINDOWS_1251)
+                    {
+                        sr = new StreamReader(openJsonFileDialog.FileName, Encoding.GetEncoding("Windows-1251"));
+                    }
+                    else
+                    {
+                        sr = new StreamReader(openJsonFileDialog.FileName, Encoding.Default);
+                    }
+
+                    treeView1.Nodes.Clear();
+                    createTable();
+
+                    _safeFileName = openJsonFileDialog.SafeFileName;
+                    _pathFileName = openJsonFileDialog.FileName;
+                    toolStripStatusLabel4.Text = _pathFileName;
+                    toolStripStatusLabel5.Text = encoding;
+
+                    string jsonText = sr.ReadToEnd();
+                    sr.Close();
+
+                    treeView1.Nodes.Add(JsonData.SetDataInTreeView(jsonText, _safeFileName));
+
+                    if (treeView1.Nodes[0].Nodes.Count > 0)
+                    {
+                        updateEditorRichTextBox();
+                    }
+                    consoleMessage("Открыт файл " + _safeFileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                consoleMessage("Ошибка: " + ex.Message);
+            }
+        }
+
+        private void saveAsFileEncoding(string encoding)
+        {
+            try
+            {
+                if (treeView1.Nodes.Count <= 0)
+                {
+                    consoleMessage("Нет данных для сохранения файла");
+                    return;
+                }
+
+                saveJsonFileDialog.FileName = _safeFileName;
+                if (saveJsonFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    FileInfo fi = new FileInfo(saveJsonFileDialog.FileName);
+                    _safeFileName = fi.Name;
+                    _pathFileName = saveJsonFileDialog.FileName;
+                    toolStripStatusLabel4.Text = _pathFileName;
+                    toolStripStatusLabel5.Text = encoding;
+
+                    if (treeView1.Nodes[0].Nodes.Count > 0)
+                    {
+                        JsonData.indexTextLine = 0;
+                        editorRichTextBox.Text = JsonData.GetTextFromTreeView(treeView1.Nodes[0].Nodes[0], 0);
+                        treeView1.Nodes[0].Text = _safeFileName;
+                    }
+
+                    StreamWriter writer;
+                    if (encoding == DEFAULT)
+                    {
+                        writer = new StreamWriter(saveJsonFileDialog.FileName, false, Encoding.Default);
+                    }
+                    else if (encoding == UTF_8)
+                    {
+                        writer = new StreamWriter(saveJsonFileDialog.FileName, false, new UTF8Encoding(false));
+                    }
+                    else if (encoding == UTF_8_BOM)
+                    {
+                        writer = new StreamWriter(saveJsonFileDialog.FileName, false, new UTF8Encoding(true));
+                    }
+                    else if (encoding == WINDOWS_1251)
+                    {
+                        writer = new StreamWriter(saveJsonFileDialog.FileName, false, Encoding.GetEncoding("Windows-1251"));
+                    }
+                    else
+                    {
+                        writer = new StreamWriter(saveJsonFileDialog.FileName, false, Encoding.Default);
+                    }
+                    writer.Write(editorRichTextBox.Text);
+                    writer.Close();
+                    this.Text = "Json File Editor";
+                    consoleMessage("Файл сохранен");
+                }
+            }
+            catch (Exception ex)
+            {
+                consoleMessage("Ошибка: " + ex.Message);
+            }
+        }
+
+        private void открытьФайлToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            openAsFileEncoding(DEFAULT);
+        }
+
+        private void кодировкаUTF8ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openAsFileEncoding(UTF_8);
+        }
+
+        private void кодировкаUTF8BOMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openAsFileEncoding(UTF_8_BOM);
+        }
+
+        private void кодировкаWindows1251ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openAsFileEncoding(WINDOWS_1251);
+        }
+
+        private void кодировкаПоУмолчаниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openAsFileEncoding(DEFAULT);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            saveAsFileEncoding(UTF_8);
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            saveAsFileEncoding(UTF_8_BOM);
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            saveAsFileEncoding(WINDOWS_1251);
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            saveAsFileEncoding(DEFAULT);
         }
     }
 }
