@@ -6,7 +6,7 @@
 таблица для непосредственного редактирования данных в json файле.
 
 <br>
-Скачать архив: https://github.com/SomovStudio/JsonFileEditor/archive/1.1.zip
+Скачать архив: https://github.com/SomovStudio/JsonFileEditor/
 
 <hr>
 
